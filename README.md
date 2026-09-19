@@ -14,7 +14,7 @@ cp .env.example .env            # optional: add LTA_ACCOUNT_KEY for live DataMal
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-Open http://127.0.0.1:8000
+Open https://smart-commuter-523735444621.asia-southeast1.run.app
 
 The replay scenarios work without a DataMall key. Choose **East West Line signalling fault** in the app to demonstrate rerouting. Replayed data is explicitly labelled simulated.
 
