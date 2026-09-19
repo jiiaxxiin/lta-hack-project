@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0E1418">
+<title>Today's run</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Semi+Condensed:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+
+<div class="video-overlay"></div>
+<header class="topbar">
+  <div class="commuter-cat" aria-hidden="true">
+    <div class="cat-ear cat-ear-left"></div>
+    <div class="cat-ear cat-ear-right"></div>
+
+    <div class="cat-face">
+        <span class="cat-eye cat-eye-left"></span>
+        <span class="cat-eye cat-eye-right"></span>
+
+        <span class="cat-nose"></span>
+
+        <span class="cat-whisker whisker-1"></span>
+        <span class="cat-whisker whisker-2"></span>
+        <span class="cat-whisker whisker-3"></span>
+        <span class="cat-whisker whisker-4"></span>
+
+        <div class="cat-bow">
+            <span></span>
+            <span></span>
+            <i></i>
+        </div>
+    </div>
+</div>
+  <button id="personaButton" class="persona" type="button" aria-haspopup="listbox" aria-expanded="false">
+    <span id="personaName">Rachel</span>
+    <span id="personaTrip" class="persona-trip">Tampines to Raffles Place</span>
+  </button>
+  <p class="clock"><span id="clock">--:--</span></p>
+</header>
+
+<div id="personaMenu" class="persona-menu" role="listbox" hidden></div>
+
+<main>
+  <section id="verdict" class="verdict verdict-loading" aria-live="polite">
+    <p class="verdict-eyebrow" id="verdictContext">Checking today's network</p>
+    <h1 class="verdict-line" id="verdictLine">One moment.</h1>
+    <p class="verdict-timing" id="verdictTiming"></p>
+  </section>
+
+  <p id="simulatedFlag" class="flag" hidden></p>
+  <p id="degradedFlag" class="flag flag-quiet" hidden></p>
+
+  <section class="strip-wrap" aria-labelledby="stripHeading">
+    <h2 id="stripHeading" class="section-heading">Your run, stop by stop</h2>
+    <div id="strip" class="strip"></div>
+    <div id="compare" class="compare" hidden></div>
+  </section>
+
+  <section class="map-wrap" aria-labelledby="mapHeading">
+    <h2 id="mapHeading" class="section-heading">Where it changes</h2>
+    <div id="map" class="map" role="img" aria-label="Map of your route"></div>
+    <p class="attribution">Map data &copy; <a href="https://www.openstreetmap.org/copyright" rel="noreferrer">OpenStreetMap</a> contributors, ODbL. Train and crowding data from LTA DataMall. Weather from data.gov.sg.</p>
+  </section>
+
+  <section class="why" aria-labelledby="whyHeading">
+    <h2 id="whyHeading" class="section-heading">Why this changed</h2>
+    <ul id="because" class="because"></ul>
+    <details id="advisoryBox" class="advisory" hidden>
+      <summary>What LTA published</summary>
+      <p id="advisoryText"></p>
+      <p id="advisoryTime" class="advisory-time"></p>
+    </details>
+  </section>
+
+  <section class="scenarios" aria-labelledby="scenarioHeading">
+    <h2 id="scenarioHeading" class="section-heading">Replay a disruption</h2>
+    <p class="scenarios-note">The live feed is empty on an ordinary day. These are injected test scenarios and the app labels them as such while they run.</p>
+    <div id="scenarioButtons" class="scenario-buttons"></div>
+  </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>

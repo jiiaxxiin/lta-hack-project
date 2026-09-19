@@ -1,0 +1,14 @@
+{
+  "scenario": "East West Line minor delay, no contingency activated",
+  "note": "Injected test data. Status 1 with an advisory only — this is the case the app must NOT interrupt Rachel for.",
+  "value": {
+    "Status": 1,
+    "AffectedSegments": [],
+    "Message": [
+      {
+        "Content": "0731hrs: EWL - Additional travelling time of 5 minutes towards Tuas Link station.",
+        "CreatedDate": "2026-09-18 07:31:02"
+      }
+    ]
+  }
+}
